@@ -1,1 +1,1 @@
-# Selenium script - sending emails from different web-mails.
+# Selenium scripts - sending emails from different web-mails.

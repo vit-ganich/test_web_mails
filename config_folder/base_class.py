@@ -21,7 +21,8 @@ class BaseClass():
         self.test_name = test_name
         logging.basicConfig(filename=self.log_file, level=logging.INFO)
         logging.info("\n%s - %s started" % (datetime.now(), self.test_name))
-        
+
+      
     def write_log(self,mess):
         logging.info("%s - %s %s" % (datetime.now(), self.test_name, mess))
 
@@ -37,9 +38,8 @@ class BaseClass():
 
     def set_up(self, startpage, sleep=0):
         try:
-            self.take_screenshot()  #  screenshot
             self.driver = webdriver.Firefox()
-            self.driver.implicitly_wait(10)
+            self.driver.implicitly_wait(15)
             self.driver.get(startpage)
             self.action = ActionChains(self.driver)
             time.sleep(sleep)
@@ -79,7 +79,6 @@ class BaseClass():
             self.driver.find_element_by_xpath(selector).click()
             time.sleep(sleep)
             logging.info("press_button OK")
-            self.take_screenshot()  #  screenshot
         except:
             logging.error("press_button ERROR") 
             raise SystemExit()
@@ -87,7 +86,7 @@ class BaseClass():
 
     def enter_address_to(self, selector, sleep=0):
         try:
-            self.driver.find_element_by_xpath(selector).send_keys(self.address_to + Keys.ENTER)
+            self.driver.find_element_by_xpath(selector).send_keys(self.address_to)
             time.sleep(sleep)
             logging.info("enter_address_to OK")
         except:
@@ -95,7 +94,7 @@ class BaseClass():
             raise SystemExit()
 
 
-    def enter_address_to(self, sleep=0):
+    def enter_address_to_2(self, sleep=0):
         """
         This method only for Outlook.com. Fore some
         reason driver.send_keys() doesn't work
@@ -155,8 +154,8 @@ class BaseClass():
             time.sleep(sleep)
             os.system(r"TASKKILL /IM firefox.exe /F")
             os.system(r"TASKKILL /IM geckodriver.exe /F")
-            logging.info("tear_down OK\n")
+            logging.info("tear_down OK")
             self.take_screenshot()  #  screenshot
         except:
-            logging.error("tear_down ERROR\n") 
+            logging.error("tear_down ERROR") 
             raise SystemExit()

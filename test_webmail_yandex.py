@@ -16,8 +16,8 @@ try:
         Start.enter_subject(conf.subject_field, sleep=1)
         Start.enter_mail_body(item, conf.subject_field, sleep=3, with_tab=True)
         Start.press_ctrl_enter(sleep=2)
+    Start.write_log("finished succesfully" )
 except:
     Start.write_log("finished with ERROR")
 finally:
-    Start.tear_down(sleep=3)
-    Start.write_log("finished succesfully" )
+    Start.tear_down(sleep=2)

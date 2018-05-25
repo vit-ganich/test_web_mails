@@ -1,8 +1,8 @@
 class General():
 
 	#  Credentials for all accounts
-	login = r"fgqa.autotest"
-	password = r"23072307au"
+	login = "fgqa.autotest"
+	password = "23072307au"
 
 	#  Login for Oulook.com
 	login_outlook = "fgqa.autotest@outlook.com"
@@ -11,8 +11,8 @@ class General():
 	login_owa = "pg/stqatester01"
 	password_owa = "c@#DvTuu"
 
-	address_to = r"ganich.test@yandex.ru"
-	log_file = r"C:\Sikuli\DEBUG_log.txt"
+	address_to = "ganich.test@yandex.ru"
+	log_file = "C:\Sikuli\DEBUG_log.txt"
 
 
 class Gmail():

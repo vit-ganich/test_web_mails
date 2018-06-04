@@ -1,17 +1,17 @@
 class General():
 
 	#  Credentials for all accounts
-	login = "fgqa.autotest"
-	password = "23072307au"
+	login = ****
+	password = ****
 
 	#  Login for Oulook.com
-	login_outlook = "fgqa.autotest@outlook.com"
+	login_outlook = ****
 	
 	#  Credentials for Oulook Web Access
-	login_owa = "pg/stqatester01"
-	password_owa = "c@#DvTuu"
+	login_owa = ****
+	password_owa = ****
 
-	address_to = "ganich.test@yandex.ru"
+	address_to = ****
 	log_file = "C:\Sikuli\DEBUG_log.txt"
 
 

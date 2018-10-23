@@ -1,5 +1,5 @@
 ## web_mails_tests
-Some automated tests for sending emails via different web-mails (Yahoo, Gmail, etc.)
+Some automated tests for Selenium and Python, sending emails via different web-mails (Yahoo, Gmail, etc.)
 
 ### Tests scheme:
 1. Run the *Firefox* browser
